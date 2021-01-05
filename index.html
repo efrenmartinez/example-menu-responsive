@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo hacer un menú responsivo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .list__desktop {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 172px;
+    }
+    .list__desktop .list__links {
+      padding-left: 0;
+    }
+    .list__desktop .list__links li {
+      display: inline;
+      margin-right: 60px;
+    }
+    .list__desktop .list__links li a {
+      font-size: 16px;
+      letter-spacing: 1.4px;
+      color: rgb(11, 90, 238);
+      text-decoration: none;
+    }
+    .list__desktop .list__links-active {
+      font-weight: bold;
+    }
+    @media screen and (max-width: 850px) {
+      .list__desktop {
+        display: none;
+      }
+      .list__movil {
+        display: flex;
+      }
+    }
+    @media screen and (min-width: 850px) {
+      .list__desktop {
+        display: flex;
+      }
+      .list__movil {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="list__desktop">
+    <ul class="list__links">
+      <li><a href="#" class="list__links-active">Inicio</a></li>
+      <li><a href="#">Acerca de nosotros</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <nav class="list__movil">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </nav>
+</body>
+</html>
